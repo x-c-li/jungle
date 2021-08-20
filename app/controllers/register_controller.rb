@@ -1,12 +1,12 @@
 class RegisterController < ApplicationController
   def index
-    @products = User.order(id: :desc).all
+    @user = User.order(id: :desc).all
   end
 
   def new
-    @product = User.new
+    @user = User.new
   end
-  
+
   def create
     @user = User.new(user_params) #creates a new user model
     #user params: all the data from the register form are stored here
@@ -24,7 +24,8 @@ class RegisterController < ApplicationController
     params.require(:user).permit(
       :first_name,
       :last_name,
-      :email
+      :email,
+      :password
     )
   end
 end
