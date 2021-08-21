@@ -7,12 +7,32 @@
   </header>
 
   <%= form_for :user, url: '/users' do |f| %>
+    
+    <div class="form-group">
+      <h4>First Name:</h4> 
+      <%= f.text_field :first_name %>
+    </div>
+    
+    <div class="form-group">
+    <h4>Last Name:</h4>
+      <%= f.text_field :last_name %>
+    </div>
 
-    First Name: <%= f.text_field :first_name %>
-    Last Name: <%= f.text_field :last_name %>
-    Email: <%= f.text_field :email %>
-    Password: <%= f.password_field :password %>
-    Password Confirmation: <%= f.password_field :password_confirmation %>
+    <div class="form-group">
+    <h4>Email:</h4> 
+      <%= f.text_field :email %>
+    </div>
+
+    <div class="form-group">
+    <h4>Password:</h4> 
+      <%= f.password_field :password %>
+    </div>
+  
+    <div class="form-group">
+    <h4>Password Confirmation:</h4> 
+      <%= f.password_field :password_confirmation %>
+    </div>
+    
     <%= f.submit "Submit" %>
 
   <% end %>
