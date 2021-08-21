@@ -4,7 +4,6 @@ class RegisterController < ApplicationController
   end
 
   def new
-    @user = User.new
   end
 
   def create
@@ -25,7 +24,7 @@ class RegisterController < ApplicationController
       :first_name,
       :last_name,
       :email,
-      :password
+      :password_digest
     )
   end
 end
