@@ -45,13 +45,13 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 `bin/rspec`
 
 ## App in Action 
-![]()
 
 # Homepage 
-![]()
+![](https://github.com/x-c-li/jungle/blob/master/docs/jungle-homepage.png)
 
 # Cart and Checkout 
-![]()
+![Cart](https://github.com/x-c-li/jungle/blob/master/docs/jungle-cart.png)
+![Paying](https://github.com/x-c-li/jungle/blob/master/docs/jungle-paying.png)
 
 # Admin Adding a New Product  
-![]()
+![](https://github.com/x-c-li/jungle/blob/master/docs/jungle-add-new-product.png)
