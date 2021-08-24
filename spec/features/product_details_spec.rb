@@ -1,9 +1,6 @@
 require 'rails_helper'
 
-#feature block is similar to RSpec's describe block 
-RSpec.feature "Visitor navigates to home page", type: :feature, js: true do
-  
-  # SETUP
+RSpec.feature "ProductDetails", type: :feature do
   before :each do
     @category = Category.create! name: 'Apparel'
 
@@ -18,18 +15,20 @@ RSpec.feature "Visitor navigates to home page", type: :feature, js: true do
     end
   end
 
-  #senario is similar to RSpec's it block
-  scenario "Navigate to product page by clicking on a product on the homepage" do
+  
+  scenario "They see all products" do
     # ACT
     visit root_path
 
     # DEBUG / VERIFY
     save_screenshot
 
-    #sets expectation of content the user should see on the page, should see at least one product
-    #if you don't see anything it's okay bc each test starts with an empty database
     expect(page).to have_css 'article.product', count: 10
+    first.('article.product').click
+    puts page.html
+    save_screenshot
 
   end
+
 
 end
