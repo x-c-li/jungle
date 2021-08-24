@@ -16,9 +16,10 @@ RSpec.feature "ProductDetails", type: :feature do
   end
 
   
-  scenario "They see all products" do
+  scenario "Navigate to product page by clicking on a product on the homepage" do
     # ACT
     visit root_path
+    puts page.html
 
     # DEBUG / VERIFY
     save_screenshot

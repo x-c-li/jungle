@@ -19,7 +19,7 @@ RSpec.feature "Visitor navigates to home page", type: :feature, js: true do
   end
 
   #senario is similar to RSpec's it block
-  scenario "Navigate to product page by clicking on a product on the homepage" do
+  scenario "They see all products" do
     # ACT
     visit root_path
 
